@@ -1,0 +1,13 @@
+management.health.circuitbreakers.enabled: true
+
+resilience4j.circuitbreaker:
+  configs:
+    default:
+      registerHealthIndicator: true
+  instances:
+    cb:
+      registerHealthIndicator: true
+      slidingWindowSize: 234
+      failureRateThreshold: 10
+      eventConsumerBufferSize: 1011
+
